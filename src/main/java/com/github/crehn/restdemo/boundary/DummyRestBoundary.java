@@ -1,6 +1,6 @@
 package com.github.crehn.restdemo.boundary;
 
-import static javax.ws.rs.core.MediaType.*;
+//import static com.github.crehn.builtinboast.RestConstants.*;
 
 import javax.ejb.Stateless;
 import javax.ws.rs.*;
@@ -28,9 +28,9 @@ public class DummyRestBoundary {
 	
 	@GET
 	@Path("/objects/{s}")
-	@ApiOperation(value = "Returns a complex objects for a string", response = ResultObject.class,
-			produces = APPLICATION_JSON + "," + APPLICATION_XML + "," + TEXT_PLAIN)
-	public ResultObject returnObject(@PathParam("s") String s) {
+	@ApiOperation(value = "Returns a complex objects for a string", response = ResultObject.class, produces = "")//JSON_XML_AND_PLAIN)
+			public
+			ResultObject returnObject(@PathParam("s") String s) {
 		log.info("called returnObject with parameter [{}]", s);
 		
 		ResultObject result = new ResultObject(s);
